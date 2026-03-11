@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --bg-0: #071427;
+  --bg-1: #0a1b33;
+  --bg-2: #0e2542;
+  --surface-1: #14283f;
+  --surface-2: #1b314a;
+  --border-1: #203a57;
+  --text-1: #e7eef9;
+  --text-2: #b9c7da;
+  --text-3: #7f93ae;
+  --primary: #f97316;
+  --accent-blue: #2563eb;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 50% -150px, rgba(37, 99, 235, 0.18), transparent 55%),
+    linear-gradient(180deg, var(--bg-1), var(--bg-0) 55%, #061020);
+  color: var(--text-2);
+}
+
+/* Helpers para notch/safe-area (iOS) */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
